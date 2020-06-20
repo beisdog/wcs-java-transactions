@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+    version="2.0">
+    <persistence-unit name="Bank" transaction-type="RESOURCE_LOCAL">
+        <!-- Persistence provider -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Entity classes -->
+        <class>com.wcs.java.tx.jpa.simple.BankAccount</class>
+
+        <properties>
+            <!-- The JDBC URL to the database instance -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/my_stuff?useSSL=false&amp;serverTimezone=CET" />
+
+            <!-- The database username -->
+            <property name="javax.persistence.jdbc.user" value="my_stuff" />
+
+            <!-- The database password -->
+            <property name="javax.persistence.jdbc.password" value="my_stuff" />
+            
+        </properties>
+    </persistence-unit>
+</persistence>
